@@ -1,0 +1,44 @@
+#include <stdio.h>
+ #include<math.h>
+double fact = 1;
+ int i, i1;
+ float sum = 0;
+ 
+void multir(int c){
+     if(c==0)
+         fact = 1;
+     else
+     for(i1=1;i1<=c;i1++){
+           fact = fact * i1;
+     }
+ }
+
+void translorm(int long a, int long b){
+     i = 0;
+     while(i<b)
+     {
+        double c = pow(a, i) * pow((-1),i);
+         //printf("%f",c);
+         printf("\n\n\n");
+
+         multir(i);
+        // printf("%f",fact);
+         printf("\n\n\n");
+         float d = c/fact;
+         sum = sum + d;
+         i++;
+     }
+    printf("%.27f",sum);
+    
+ }
+ 
+
+int main()
+ {
+     int c;
+     int d;
+     scanf("%d",&c);
+     scanf("%d",&d);
+
+     translorm(c,d);
+ }
